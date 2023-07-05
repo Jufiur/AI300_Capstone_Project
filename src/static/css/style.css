@@ -1,0 +1,56 @@
+/*  1. Set font of entire webpage to Open Sans (Google Font)  */
+
+body {
+    /* Source: https://fonts.google.com/specimen/Open+Sans */
+    font-family: 'Open Sans', sans-serif;
+    background: lightseagreen;
+    font-size: 12px;
+}
+
+input, select {
+    /* Reference: https://stackoverflow.com/a/6080482 */
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/*  2. Simple CSS formatting for HTML form
+    Code adapted from https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
+    Tutorial: https://www.w3schools.com/css/css_form.asp
+*/
+
+input[type=text], select {
+    width: 80%;
+    padding: 6px 10px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    padding: 6px 10px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 102, 255);
+}
+
+div {
+    border-radius: 5px;
+    padding: 20px;
+    /* add margins to reduce box width */
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    /* add 50% transparency for styling */
+    background-color: rgb(172, 230, 172);
+}

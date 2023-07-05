@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    
+</head>
+<body>
+    <div>
+        <h1>Customer Churn Prediction</h1>
+        <form method="POST">
+            <label for="has_internet_service">Has Internet Service:</label><br>
+            <select name="has_internet_service" id="has_internet_service">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+            </select><br><br>
+            
+            <label for="internet_type">Internet Type:</label><br>
+                <select name="internet_type" id="internet_type">
+                <option value="0" selected>None</option>
+                <option value="1">Cable</option>
+                <option value="2">DSL</option>
+                <option value="3">Fiber Optic</option>
+                </select><br><br>
+
+            <label for="has_unlimited_data">Has Unlimited Data:</label><br>
+                <select name="has_unlimited_data" id="has_unlimited_data">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+            
+            <label for="paperless_billing">Paperless Billing:</label><br>
+                <select name="paperless_billing" id="paperless_billing">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="stream_tv">Stream Tv:</label><br>
+                <select name="stream_tv" id="stream_tv">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+            
+            <label for="stream_movie">Stream Movie:</label><br>
+                <select name="stream_movie" id="stream_movie">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+            
+            <label for="senior_citizen">Senior Citizen:</label><br>
+                <select name="senior_citizen" id="senior_citizen">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="tenure_months">Tenure Months:</label><br>
+                <select name="tenure_months" id="tenure_months">
+                <option value="0" selected><12</option>
+                <option value="1"><24</option>
+                <option value="2"><36</option>
+                <option value="3"><48</option>
+                <option value="4"><60</option>
+                <option value="5">>=60</option>
+                </select><br><br>
+
+            <label for="num_referrals">Num Referrals:</label><br>
+                <select name="num_referrals" id="num_referrals">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                </select><br><br>
+
+            <label for="has_premium_tech_support">Has Premium Tech Support:</label><br>
+                <select name="has_premium_tech_support" id="has_premium_tech_support">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="has_online_security">Has Online Security:</label><br>
+                <select name="has_online_security" id="has_online_security">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="has_online_backup">Has Online Backup:</label><br>
+                <select name="has_online_backup" id="has_online_backup">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="has_device_protection">Has Device Protection:</label><br>
+                <select name="has_device_protection" id="has_device_protection">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="contract_type">Contract Type:</label><br>
+                <select name="contract_type" id="contract_type">
+                <option value="0" selected>Month-to-Month</option>
+                <option value="1">One Year</option>
+                <option value="2">Two Year</option>
+                </select><br><br>
+
+            <label for="payment_method">Payment Method:</label><br>
+                <select name="payment_method" id="payment_method">
+                <option value="0" selected>Mailed Check</option>
+                <option value="1">Bank Withdrawal</option>
+                <option value="2">Credit Card</option>
+                </select><br><br>
+
+            <label for="married">Married:</label><br>
+                <select name="married" id="married">
+                <option value="1" selected>Yes</option>
+                <option value="0">No</option>
+                </select><br><br>
+
+            <label for="num_dependents">Num Dependents:</label><br>
+                <select name="num_dependents" id="num_dependents">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if prediction is defined %}
+            <h2>Predicted Customer to Churn: {{ prediction }}</h2>
+            <h3>(1 = Likely to Churn and 0 = Unlikely to Churn)</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
