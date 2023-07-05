@@ -1,13 +1,12 @@
-# may23-team03
-AI300 Capstone Project
+# AI300 Capstone Project
  
 1. Team Number & Names of Team Members:
    - Team Number: team03
    - Team Member Names: Jufiur Lim (Leader) and Benjamin Ng 
     
 2. Website URL of deployed Flask web application:
-   - Public IPv4 address: http://13.212.178.51/
-   - Public IPv4 DNS: http://ec2-13-212-178-51.ap-southeast-1.compute.amazonaws.com/
+   - Public IPv4 address: http://52.77.220.238/
+   - Public IPv4 DNS: http://ec2-52-77-220-238.ap-southeast-1.compute.amazonaws.com/
 
 4. Details on chosen final model and model parameters:
    Final Model:
